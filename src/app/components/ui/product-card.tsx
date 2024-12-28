@@ -5,10 +5,10 @@ interface ProductCardProps {
   name: string;
   price: string;
   imageUrl: string;
-  href: string;
+  href?: string; // Optional href
 }
 
-export function ProductCard({ name, price, imageUrl, href }: ProductCardProps) {
+export function ProductCard({ name, price, imageUrl, href = "#" }: ProductCardProps) {
   return (
     <Link href={href} className="group block">
       <div className="relative aspect-square md:aspect-[3/4] w-full overflow-hidden bg-[#F9F9F9] mb-3 md:mb-6">
